@@ -7,6 +7,8 @@ function getHeader(): Header {
   return "Hello World";
 }
 
+app.use(express.static("public"));
+
 app.get("/", (req, res) => {
   res.send(getHeader());
 });

@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to right, rgb(20, 20, 20), rgb(10, 10, 10));
+  color: white;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 28px;
+  text-align: center;
+  position: relative;
+  top: 250px;
+  margin-top: 30px;
+}
+
+button {
+  position: relative;
+  top: 300px;
+  width: 400px;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+.container {
+  display: grid;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+header {
+  background-color: rgb(33, 33, 33);
+  padding: 25px;
+}
+
+header > div a {
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
