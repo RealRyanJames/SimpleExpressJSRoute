@@ -1,16 +1,34 @@
 import express from "express";
+import { HOME, RGB } from "./Routing/Routing.js";
+import path from "node:path";
 type Header = string;
-
-const app = express();
+const __dirname = path.resolve();
 
 function getHeader(): Header {
   return "Hello World";
 }
 
-app.use(express.static("public"));
+const app = express();
 
-app.get("/", (req, res) => {
+app.use(express.static("public"));
+app.use(express.static("public/Pages"));
+
+app.get(HOME, (req, res) => {
   res.send(getHeader());
+});
+
+app.get(RGB, (req, res) => {
+  res.send(getRGBTitle());
+  const op = {
+    root: path.join(__dirname),
+  };
+  res.sendFile("./Pages/pageFiles/index.html", op, function (err) {
+    if (err) {
+      console.log(err);
+    }
+  });
+
+  res;
 });
 
 app.listen(3000, () => {
