@@ -27,6 +27,15 @@ button {
   outline: none;
 }
 
+h2 {
+  font-size: 27px;
+  letter-spacing: 5px;
+  position: relative;
+  top: 350px;
+  text-align: center;
+  margin: 0 auto;
+}
+
 .container {
   display: grid;
   justify-content: space-evenly;
