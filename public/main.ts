@@ -1,5 +1,3 @@
-import { getOnClient } from "../DB/DB";
-
 type ButtonEl = HTMLButtonElement;
 type Num = number;
 
@@ -10,6 +8,8 @@ function generateStringR(): number | string {
 function generateStringG(): number | string {
   return Math.floor(Math.random() * 255);
 }
+
+const button: ButtonEl = document.getElementById("button") as ButtonEl;
 
 function generateStringB(): number | string {
   return Math.floor(Math.random() * 255);
@@ -30,11 +30,6 @@ async function onClickHex() {
 
   const rgbCode = `R: ${r}, G: ${g}, B: ${b}`;
   const hexCode = `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`;
-
-  await getOnClient(rgbCode.toString(), "");
-  await getOnClient(hexCode.toString(), "");
 }
-
-const button: ButtonEl = document.getElementById("button") as ButtonEl;
 
 button.addEventListener("click", onClickHex);
