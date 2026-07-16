@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to right, rgb(20, 20, 20), rgb(10, 10, 10));
+  color: white;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 27px;
+}
+
+button:nth-child(1) {
+  padding: 10px;
+  width: 150px;
+  border: none;
+  outline: none;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+button:nth-child(2) {
+  padding: 10px;
+  width: 150px;
+  border: none;
+  outline: none;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+button {
+  margin: 10px;
+  position: relative;
+  top: 30px;
+}
+
+button:nth-child(1):hover {
+  background-color: red;
+  text-transform: uppercase;
+  transition: all 0.9s ease-in-out;
+}
+
+button:nth-child(2):hover {
+  background-color: green;
+  text-transform: uppercase;
+  transition: all 0.9s ease-in-out;
+}
+
+button:nth-child(3):hover {
+  background-color: blue;
+  text-transform: uppercase;
+  transition: all 0.9s ease-in-out;
+}
+
+button:nth-child(3) {
+  padding: 10px;
+  width: 150px;
+  border: none;
+  outline: none;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+main {
+  text-align: center;
+  position: relative;
+  top: 300px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
