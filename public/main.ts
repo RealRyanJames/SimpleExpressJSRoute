@@ -1,3 +1,5 @@
+import { getOnClient } from "../DB/DB";
+
 type ButtonEl = HTMLButtonElement;
 type Num = number;
 
@@ -13,7 +15,7 @@ function generateStringB(): number | string {
   return Math.floor(Math.random() * 255);
 }
 
-function onClickHex() {
+async function onClickHex() {
   const r = generateStringR();
   const g = generateStringG();
   const b = generateStringB();
@@ -25,6 +27,12 @@ function onClickHex() {
   hexStringHTMLG.textContent = `G: ${g}`;
   hexStringHTMLB.textContent = `B: ${b}`;
   hexStringHTMLHex.textContent = `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`;
+
+  const rgbCode = `R: ${r}, G: ${g}, B: ${b}`;
+  const hexCode = `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`;
+
+  await getOnClient(rgbCode.toString(), "");
+  await getOnClient(hexCode.toString(), "");
 }
 
 const button: ButtonEl = document.getElementById("button") as ButtonEl;
