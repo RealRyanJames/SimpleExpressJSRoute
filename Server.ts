@@ -1,7 +1,6 @@
 import express from "express";
-import { HOME } from "./Routing/Routing.js";
 import path from "node:path";
-import { COLORS } from "./Routing/Routing.js";
+import { COLORS, HOME } from "./Routing/Routing.js";
 type Header = string;
 const __dirname = path.resolve();
 
