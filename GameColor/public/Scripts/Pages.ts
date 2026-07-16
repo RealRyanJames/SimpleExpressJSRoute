@@ -12,26 +12,27 @@ function getColorBal(balColor: (name: string) => string, colorName: string) {
   balColor(colorName);
 }
 
+const clickBtnColor = RandomColor();
+
 function clickColorButton(doc: HTMLElement) {
-  const clickBtnColor = RandomColor();
-  if (clickBtnColor == "red") {
+  if (clickBtnColor === "red") {
     doc.style.backgroundColor = "red";
-  } else if (clickBtnColor == "green") {
+  }
+
+  if (clickBtnColor === "green") {
     doc.style.backgroundColor = "green";
-  } else if (clickBtnColor == "blue") {
+  }
+
+  if (clickBtnColor === "blue") {
     doc.style.backgroundColor = "blue";
   }
 }
-
-console.log(RandomColor());
 
 function upper(txt: string): string {
   return txt.toUpperCase();
 }
 
 const buttonR = document.getElementById("red") as HTMLButtonElement;
-
-const clickBtnColor = RandomColor();
 
 buttonR.addEventListener("click", () => {
   clickColorButton(document.body);

@@ -10,42 +10,33 @@ function RandomColor() {
 function getColorBal(balColor, colorName) {
     balColor(colorName);
 }
+const clickBtnColor = RandomColor();
 function clickColorButton(doc) {
-    const clickBtnColor = RandomColor();
-    if (clickBtnColor == "red") {
+    if (clickBtnColor === "red") {
         doc.style.backgroundColor = "red";
     }
-    else if (clickBtnColor == "green") {
+    if (clickBtnColor === "green") {
         doc.style.backgroundColor = "green";
     }
-    else if (clickBtnColor == "blue") {
+    if (clickBtnColor === "blue") {
         doc.style.backgroundColor = "blue";
     }
 }
-console.log(RandomColor());
 function upper(txt) {
     return txt.toUpperCase();
 }
 const buttonR = document.getElementById("red");
-const clickBtnColor = RandomColor();
 buttonR.addEventListener("click", () => {
-    document.body.style.backgroundColor = "red";
-    // if (clickBtnColor == "red") {
-    //   document.body.style.backgroundColor = "red";
-    // }
+    clickColorButton(document.body);
 });
 // alert("Hello World");
 const buttonG = document.getElementById("green");
 buttonG.addEventListener("click", () => {
-    if (clickBtnColor == "green") {
-        document.body.style.backgroundColor = "green";
-    }
+    clickColorButton(document.body);
 });
 const buttonB = document.getElementById("blue");
 buttonB.addEventListener("click", () => {
-    if (clickBtnColor == "blue") {
-        document.body.style.backgroundColor = "blue";
-    }
+    clickColorButton(document.body);
 });
 window.onload = () => {
     let PAGE_TITLE = document.getElementById("title");
